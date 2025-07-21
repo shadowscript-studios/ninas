@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+html {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.inter-900 {
+	font-weight: 900;
+}
+
+.inter-300 {
+	font-weight: 300;
+}
+
+@theme {
+	--color-nina-blue: #253546;
+	--color-nina-beige: #cbbba0;
+	--color-nina-accent: #99d3f4;
+}
