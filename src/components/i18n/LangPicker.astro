@@ -1,0 +1,23 @@
+---
+import { languages } from "../../i18n/ui";
+import { localeT } from "../../i18n/types";
+
+const route = (locale: string | undefined) => {
+	console.log("locale", locale);
+	if (locale === localeT.EN || locale === localeT.FR) {
+		return "";
+	}
+
+	return locale;
+};
+---
+
+<ul>
+	{
+		Object.entries(languages).map(([lang, label]) => (
+			<li>
+				<a href={`/${lang}/${route(Astro.params.locale) || ""}`}>{label}</a>
+			</li>
+		))
+	}
+</ul>

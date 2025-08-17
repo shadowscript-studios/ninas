@@ -16,7 +16,8 @@ html {
 }
 
 @theme {
-	--color-nina-blue: #253546;
-	--color-nina-beige: #cbbba0;
-	--color-nina-accent: #99d3f4;
+	--color-nina-navy: #161b22;
+	--color-nina-orange: #e4ab49;
+	--color-nina-beige: #dad4c4;
+	--color-nina-beige-2: #cbbba0;
 }
