@@ -2,8 +2,9 @@
 import { languages } from "../../i18n/ui";
 import { localeT } from "../../i18n/types";
 
+const activeLang = Astro.params.locale;
+
 const route = (locale: string | undefined) => {
-	console.log("locale", locale);
 	if (locale === localeT.EN || locale === localeT.FR) {
 		return "";
 	}
@@ -12,11 +13,13 @@ const route = (locale: string | undefined) => {
 };
 ---
 
-<ul>
+<ul class="flex items-center gap-2">
 	{
 		Object.entries(languages).map(([lang, label]) => (
-			<li>
-				<a href={`/${lang}/${route(Astro.params.locale) || ""}`}>{label}</a>
+			<li
+				class={`${activeLang === lang ? "bg-nina-beige text-nina-navy" : "bg-nina-navy text-nina-beige"} w-8 rounded-md p-1 text-center transition-all duration-150`}
+			>
+				<a href={`/${lang}/${route(activeLang) || ""}`}>{label}</a>
 			</li>
 		))
 	}

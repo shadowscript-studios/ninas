@@ -1,23 +1,26 @@
 ---
-import ninaLogo from "../../assets/nina-logo.png";
+import ninaLogo from "../../assets/icons/logo-nina-small.png";
 import LangPicker from "../i18n/LangPicker.astro";
+import Instagram from "@lucide/astro/icons/instagram";
+import Facebook from "@lucide/astro/icons/facebook";
 ---
 
-<nav class="grid grid-cols-3 gap-4 p-4">
-	<div>
+<nav class="fixed top-0 left-0 z-50 grid w-full grid-cols-2 items-center gap-4 p-4 md:grid-cols-3">
+	<div class="flex h-full items-center">
 		<img src={ninaLogo.src} alt="Nina Logo" class="h-12 w-auto" />
 	</div>
-	<div class="flex items-start justify-center">
-		<button
-			class="bg-nina-blue border-nina-beige text-nina-beige rounded-full border px-4 py-1 text-sm hover:bg-stone-600"
-		>
-			<a href="/">Order</a>
-		</button>
+	<div class="hidden items-center justify-center gap-3 md:flex">
+		<a href="/">Menu</a>
+		<a href="/">Order</a>
+		<a href="/">About</a>
 	</div>
-	<div>
-		<address class="font-b text-right text-sm not-italic">
-			Morcellement Jubhoo MU,<br /> Trou-aux-Biches<br /> 22321
-		</address>
+	<div class="flex items-center justify-end gap-4">
+		<LangPicker />
+		<a href="" target="_blank" href="">
+			<Instagram />
+		</a>
+		<a href="" target="_blank" href="">
+			<Facebook />
+		</a>
 	</div>
-	<LangPicker />
 </nav>

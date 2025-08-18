@@ -11,12 +11,11 @@ export async function getStaticPaths() {
 }
 ---
 
-<ul>
-	<li><a href={`/${lang}/home/`}>{t("nav.home")}</a></li>
-	<li><a href={`/${lang}/about/`}>{t("nav.hello")}</a></li>
-	<li><a href="https://twitter.com/astrodotbuild">{t("nav.twitter")}</a></li>
-</ul>
-
 <Layout>
+	<!-- <ul>
+		<li><a href={`/${lang}/home/`}>{t("nav.home")}</a></li>
+		<li><a href={`/${lang}/about/`}>{t("nav.hello")}</a></li>
+		<li><a href="https://twitter.com/astrodotbuild">{t("nav.twitter")}</a></li>
+	</ul> -->
 	<Welcome />
 </Layout>
