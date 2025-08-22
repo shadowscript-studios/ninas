@@ -6,66 +6,35 @@ import MapPin from "@lucide/astro/icons/map-pin";
 import MessageCircle from "@lucide/astro/icons/message-circle";
 ---
 
-<div>
-	<Navigation />
-	<main>
-		<section id="hero" class="relative mx-auto min-h-screen w-full max-w-7xl">
-			<!-- UI layer  -->
-			<div
-				class="absolute top-1/2 left-1/2 z-0 w-72 -translate-x-1/2 -translate-y-[475px] lg:w-96 lg:-translate-y-[450px]"
+<section id="hero" class="relative mx-auto min-h-screen w-full max-w-[1712px] overflow-hidden">
+	<!-- UI layer  -->
+	<div
+		class="absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-[435px] lg:-translate-y-[450px]"
+	>
+		<img src={ninaLogo.src} class="max-h-[400px] w-full object-contain" />
+		<div class="mx-auto w-72">
+			<a
+				target="_blank"
+				class="inline-block -translate-x-8 -translate-y-0 lg:-translate-x-60 lg:-translate-y-0"
 			>
-				<img src={ninaLogo.src} class="h-min" />
-				<a
-					target="_blank"
-					class="inline-block -translate-x-8 -translate-y-0 lg:-translate-x-32 lg:-translate-y-16"
+				<div
+					class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
 				>
-					<div
-						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
-					>
-						<MessageCircle />
-						<span>Order here!</span>
-					</div>
-				</a>
-				<a class="inline-block translate-x-32 -translate-y-28 lg:translate-x-32 lg:-translate-y-20">
-					<div
-						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
-					>
-						<MapPin /><span>We're here!</span>
-					</div>
-				</a>
-			</div>
-			<!-- Functional latyer -->
-			<div
-				class="absolute top-1/2 left-1/2 z-50 w-72 -translate-x-1/2 -translate-y-[475px] opacity-0 lg:w-96 lg:-translate-y-[450px]"
-			>
-				<img src={ninaLogo.src} class="h-min" />
-				<a
-					target="_blank"
-					href="https://maps.app.goo.gl/Mv6aDj16UJhpBSTQ9"
-					class="inline-block -translate-x-8 -translate-y-0 cursor-pointer lg:-translate-x-32 lg:-translate-y-16"
+					<MessageCircle />
+					<span>Order here!</span>
+				</div>
+			</a>
+			<a class="inline-block translate-x-32 -translate-y-28 lg:translate-x-64 lg:-translate-y-32">
+				<div
+					class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
 				>
-					<div
-						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
-					>
-						<MessageCircle />
-						<span>Order here!</span>
-					</div>
-				</a>
-				<a
-					href="https://maps.app.goo.gl/Mv6aDj16UJhpBSTQ9"
-					class="inline-block translate-x-32 -translate-y-28 cursor-pointer md:translate-x-32 md:-translate-y-20"
-				>
-					<div
-						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
-					>
-						<MapPin /><span>We're here!</span>
-					</div>
-				</a>
-			</div>
-			<img
-				class="absolute bottom-0 left-0 z-10 h-full w-full object-cover object-bottom"
-				src={burgerBg.src}
-			/>
-		</section>
-	</main>
-</div>
+					<MapPin /><span>We're here!</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<img
+		class="absolute top-0 left-0 z-10 h-full w-full overflow-visible object-cover object-bottom pt-[450px] lg:pt-[325px]"
+		src={burgerBg.src}
+	/>
+</section>

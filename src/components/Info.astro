@@ -4,92 +4,88 @@ import MapPin from "@lucide/astro/icons/map-pin";
 import Resto from "../assets/img/resto.jpeg";
 ---
 
-<div>
-	<Navigation />
-	<main>
-		<section
-			id="info"
-			class="relative mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 lg:grid-cols-2"
-		>
-			<div class="mx-auto flex w-full max-w-[550px] flex-col items-start justify-center gap-4 p-6">
-				<div
-					class="mb-6 flex w-full max-w-none flex-col items-center justify-center gap-6 text-center md:text-left lg:max-w-[340px]"
-				>
-					<h2 class="text-4xl font-semibold lg:text-5xl">
-						OR <span class="text-nina-accent">visit us</span> directly
-					</h2>
-					<div class="mx-auto flex items-start justify-center gap-2">
-						<MapPin />
-						<span>at Morcellement Jubhoo, Trou-aux-Biches</span>
-					</div>
-				</div>
-				<div class="w-full lg:max-w-[600px]">
-					<iframe
-						class="block w-full overflow-hidden rounded-lg"
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.309783908269!2d57.547363000000004!3d-20.0374631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217dad5c09249a79%3A0x7ad7d08d899fc92d!2sNina's!5e0!3m2!1sen!2sza!4v1755850914727!5m2!1sen!2sza"
-						width="815"
-						height="350"
-						style="border:0;"
-						allowfullscreen=""
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<div>
-					<h4 class="text-nina-beige-2 mb-4 text-center text-2xl font-semibold md:text-left">
-						Opening hours
-					</h4>
-					<div class="grid grid-cols-2 grid-rows-7">
-						<div
-							class={new Date().getDay() === 0 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Sunday
-						</div>
-						<div class={new Date().getDay() === 0 ? "text-nina-accent" : ""}>
-							11:30 - 14:00, 18:30 - 21:00
-						</div>
-						<div
-							class={new Date().getDay() === 1 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Monday
-						</div>
-						<div class={new Date().getDay() === 1 ? "text-nina-accent" : ""}>Closed</div>
-						<div
-							class={new Date().getDay() === 2 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Tuesday
-						</div>
-						<div class={new Date().getDay() === 2 ? "text-nina-accent" : ""}>Closed</div>
-						<div
-							class={new Date().getDay() === 3 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Wednesday
-						</div>
-						<div class={new Date().getDay() === 3 ? "text-nina-accent" : ""}>
-							11:30 - 14:00, 18:30 - 21:00
-						</div>
-						<div
-							class={new Date().getDay() === 4 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Thursday
-						</div>
-						<div class={new Date().getDay() === 4 ? "text-nina-accent" : ""}>
-							11:30 - 14:00, 18:30 - 21:00
-						</div>
-						<div
-							class={new Date().getDay() === 5 ? "font-semibold text-nina-accent" : "font-semibold"}
-						>
-							Friday
-						</div>
-						<div class={new Date().getDay() === 5 ? "text-nina-accent" : ""}>
-							11:00 - 14:00, 18:30 - 21:00
-						</div>
-					</div>
+<section
+	id="info"
+	class="mx-auto grid min-h-screen w-full max-w-[1712px] grid-cols-1 lg:grid-cols-2"
+>
+	<div class="h-full w-full">
+		<div class="mx-auto flex h-full max-w-[600px] flex-col items-start justify-center gap-4 p-6">
+			<div
+				class="mb-6 flex w-full max-w-none flex-col items-center justify-center gap-6 text-center md:text-left lg:max-w-[600px] lg:items-start"
+			>
+				<h2 class="text-4xl font-semibold lg:text-5xl">
+					OR <span class="text-nina-accent">visit us</span> directly
+				</h2>
+				<div class="mx-auto flex items-start justify-center gap-2 lg:mx-0">
+					<MapPin />
+					<span>at Morcellement Jubhoo, Trou-aux-Biches</span>
 				</div>
 			</div>
-
+			<div class="w-full lg:max-w-[600px]">
+				<iframe
+					class="block w-full overflow-hidden rounded-lg"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.309783908269!2d57.547363000000004!3d-20.0374631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217dad5c09249a79%3A0x7ad7d08d899fc92d!2sNina's!5e0!3m2!1sen!2sza!4v1755850914727!5m2!1sen!2sza"
+					width="815"
+					height="350"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 			<div>
-				<img class="hidden h-screen w-full object-cover object-bottom lg:block" src={Resto.src} />
+				<h4 class="text-nina-beige-2 mb-4 text-center text-2xl font-semibold md:text-left">
+					Opening hours
+				</h4>
+				<div class="grid grid-cols-2 grid-rows-7">
+					<div
+						class={new Date().getDay() === 0 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Sunday
+					</div>
+					<div class={new Date().getDay() === 0 ? "text-nina-accent" : ""}>
+						11:30 - 14:00, 18:30 - 21:00
+					</div>
+					<div
+						class={new Date().getDay() === 1 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Monday
+					</div>
+					<div class={new Date().getDay() === 1 ? "text-nina-accent" : ""}>Closed</div>
+					<div
+						class={new Date().getDay() === 2 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Tuesday
+					</div>
+					<div class={new Date().getDay() === 2 ? "text-nina-accent" : ""}>Closed</div>
+					<div
+						class={new Date().getDay() === 3 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Wednesday
+					</div>
+					<div class={new Date().getDay() === 3 ? "text-nina-accent" : ""}>
+						11:30 - 14:00, 18:30 - 21:00
+					</div>
+					<div
+						class={new Date().getDay() === 4 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Thursday
+					</div>
+					<div class={new Date().getDay() === 4 ? "text-nina-accent" : ""}>
+						11:30 - 14:00, 18:30 - 21:00
+					</div>
+					<div
+						class={new Date().getDay() === 5 ? "font-semibold text-nina-accent" : "font-semibold"}
+					>
+						Friday
+					</div>
+					<div class={new Date().getDay() === 5 ? "text-nina-accent" : ""}>
+						11:00 - 14:00, 18:30 - 21:00
+					</div>
+				</div>
 			</div>
-		</section>
-	</main>
-</div>
+		</div>
+	</div>
+	<div class="h-full w-full">
+		<img class="hidden h-screen w-full object-cover lg:block" src={Resto.src} />
+	</div>
+</section>

@@ -3,39 +3,34 @@ import Navigation from "./navigation/Navigation.astro";
 import orderBg from "../assets/img/order.webp";
 ---
 
-<div>
-	<Navigation />
-	<main>
-		<section
-			id="order"
-			class="relative mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 pt-16 md:grid-cols-2 md:p-0"
-		>
-			<div class="hidden md:block">
-				<img class="h-screen w-full object-cover object-bottom" src={orderBg.src} />
-			</div>
-			<div
-				class="mx-auto flex w-full flex-col items-start justify-center gap-4 md:max-w-[650px] md:pl-4 lg:mx-0 lg:p-18"
-			>
-				<div class="side-bar relative mx-auto mb-8 pl-6 md:mx-0 lg:mb-12 lg:pl-8">
-					<h2 class="text-4xl font-semibold lg:text-5xl">
-						Good food, <br />good vibes. <br />Served with love,<br /> only at <br /><span
-							class="text-nina-accent">NINA’S</span
-						>.
-					</h2>
-					<!-- <img class="block h-[390px] w-full object-cover md:hidden" src={orderBg.src} /> -->
-				</div>
+<section
+	id="order"
+	class="mx-auto grid min-h-screen w-full max-w-[1712px] grid-cols-1 pt-16 md:grid-cols-2 md:p-0"
+>
+	<div class="hidden md:block">
+		<img class="h-screen w-full object-cover object-bottom" src={orderBg.src} />
+	</div>
+	<div
+		class="mx-auto flex h-full w-full flex-col items-start justify-center gap-4 md:max-w-[650px] md:pl-4 lg:mx-0 lg:pl-18"
+	>
+		<div class="side-bar relative mx-auto mb-8 pl-6 md:mx-0 lg:mb-12 lg:pl-8">
+			<h2 class="text-4xl font-semibold lg:text-5xl">
+				Good food, <br />good vibes. <br />Served with love,<br /> only at <br /><span
+					class="text-nina-accent">NINA’S</span
+				>.
+			</h2>
+			<!-- <img class="block h-[390px] w-full object-cover md:hidden" src={orderBg.src} /> -->
+		</div>
 
-				<img class="block h-[390px] w-full object-cover md:hidden" src={orderBg.src} />
+		<img class="block h-[390px] w-full object-cover md:hidden" src={orderBg.src} />
 
-				<div class="w-full p-4 text-center md:p-0 md:text-left">
-					<h3 class="mb-6 text-4xl font-semibold md:text-3xl lg:text-5xl">
-						Want to place <br />an
-						<span class="text-nina-accent">order </span>?
-					</h3>
-					<p>Contact us on whatsapp <br />to send your order<br /> or place a reservation.</p>
-					<button class="bg-nina-blue mt-4 px-4 py-2 font-semibold">Order now!</button>
-				</div>
-			</div>
-		</section>
-	</main>
-</div>
+		<div class="w-full p-4 text-center md:p-0 md:text-left">
+			<h3 class="mb-6 text-4xl font-semibold md:text-3xl lg:text-5xl">
+				Want to place <br />an
+				<span class="text-nina-accent">order </span>?
+			</h3>
+			<p>Contact us on whatsapp <br />to send your order<br /> or place a reservation.</p>
+			<button class="bg-nina-blue mt-4 px-4 py-2 font-semibold">Order now!</button>
+		</div>
+	</div>
+</section>

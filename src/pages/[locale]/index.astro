@@ -5,6 +5,7 @@ import Info from "../../components/Info.astro";
 import Layout from "../../layouts/Layout.astro";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Navigation from "../../components/navigation/Navigation.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(Astro.params.locale as "en" | "fr");
@@ -21,6 +22,7 @@ export async function getStaticPaths() {
 		<li><a href="https://twitter.com/astrodotbuild">{t("nav.twitter")}</a></li>
 	</ul> -->
 	<!-- <div class=""> -->
+	<Navigation />
 	<div class="scroll-smooth">
 		<div class="snap-start">
 			<Welcome />
@@ -29,7 +31,7 @@ export async function getStaticPaths() {
 		<div class="snap-center">
 			<Order />
 		</div>
-		<!-- <div class="bg-nina-accent mx-auto h-6 w-full max-w-7xl"></div> -->
+		<div class="bg-nina-accent mx-auto hidden h-6 w-full max-w-[1712px]"></div>
 		<div class="snap-center">
 			<Info />
 		</div>
