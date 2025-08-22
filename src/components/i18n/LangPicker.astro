@@ -17,7 +17,7 @@ const route = (locale: string | undefined) => {
 	{
 		Object.entries(languages).map(([lang, label]) => (
 			<li
-				class={`${activeLang === lang ? "bg-nina-beige text-nina-navy" : "bg-nina-navy text-nina-beige"} w-8 rounded-md p-1 text-center transition-all duration-150`}
+				class={`${activeLang === lang ? "bg-nina-beige text-nina-navy" : "bg-nina-navy text-nina-beige"} w-8 rounded-full p-1 text-center transition-all duration-150`}
 			>
 				<a href={`/${lang}/${route(activeLang) || ""}`}>{label}</a>
 			</li>

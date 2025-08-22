@@ -5,22 +5,28 @@ import Instagram from "@lucide/astro/icons/instagram";
 import Facebook from "@lucide/astro/icons/facebook";
 ---
 
-<nav class="fixed top-0 left-0 z-50 grid w-full grid-cols-2 items-center gap-4 p-4 md:grid-cols-3">
-	<div class="flex h-full items-center">
-		<img src={ninaLogo.src} alt="Nina Logo" class="h-12 w-auto" />
-	</div>
-	<div class="hidden items-center justify-center gap-3 md:flex">
-		<a href="/">Menu</a>
-		<a href="/">Order</a>
-		<a href="/">About</a>
-	</div>
-	<div class="flex items-center justify-end gap-4">
-		<LangPicker />
-		<a href="" target="_blank" href="">
-			<Instagram />
-		</a>
-		<a href="" target="_blank" href="">
-			<Facebook />
-		</a>
+<nav class="fixed top-0 left-1/2 z-50 w-full max-w-7xl -translate-x-1/2">
+	<div class="glass grid grid-cols-2 items-center gap-4 p-2 md:grid-cols-3">
+		<div class="flex h-full items-center">
+			<img src={ninaLogo.src} alt="Nina Logo" class="h-12 w-auto" />
+		</div>
+		<div class="hidden items-center justify-center gap-3 md:flex">
+			<a class="nav-item relative" href="/">Menu</a>
+			<a class="nav-item relative" href="/">Order</a>
+			<a class="nav-item relative" href="/">About</a>
+		</div>
+		<div class="flex items-center justify-end gap-4">
+			<LangPicker />
+			<a
+				href="https://www.instagram.com/ninas_resto?igsh=MXNzZzltNmdqdGdrOQ=="
+				target="_blank"
+				href=""
+			>
+				<Instagram />
+			</a>
+			<a href="https://www.facebook.com/creperienina/" target="_blank" href="">
+				<Facebook />
+			</a>
+		</div>
 	</div>
 </nav>

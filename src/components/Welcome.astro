@@ -2,23 +2,69 @@
 import Navigation from "./navigation/Navigation.astro";
 import burgerBg from "../assets/img/burger-bg.png";
 import ninaLogo from "../assets/img/nina-logo.png";
+import MapPin from "@lucide/astro/icons/map-pin";
+import MessageCircle from "@lucide/astro/icons/message-circle";
 ---
 
 <div>
 	<Navigation />
-
 	<main>
-		<section id="hero" class="relative h-screen w-full">
+		<section id="hero" class="relative mx-auto min-h-screen w-full max-w-7xl">
+			<!-- UI layer  -->
+			<div
+				class="absolute top-1/2 left-1/2 z-0 w-72 -translate-x-1/2 -translate-y-[475px] lg:w-96 lg:-translate-y-[450px]"
+			>
+				<img src={ninaLogo.src} class="h-min" />
+				<a
+					target="_blank"
+					class="inline-block -translate-x-8 -translate-y-0 lg:-translate-x-32 lg:-translate-y-16"
+				>
+					<div
+						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
+					>
+						<MessageCircle />
+						<span>Order here!</span>
+					</div>
+				</a>
+				<a class="inline-block translate-x-32 -translate-y-28 lg:translate-x-32 lg:-translate-y-20">
+					<div
+						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
+					>
+						<MapPin /><span>We're here!</span>
+					</div>
+				</a>
+			</div>
+			<!-- Functional latyer -->
+			<div
+				class="absolute top-1/2 left-1/2 z-50 w-72 -translate-x-1/2 -translate-y-[475px] opacity-0 lg:w-96 lg:-translate-y-[450px]"
+			>
+				<img src={ninaLogo.src} class="h-min" />
+				<a
+					target="_blank"
+					href="https://maps.app.goo.gl/Mv6aDj16UJhpBSTQ9"
+					class="inline-block -translate-x-8 -translate-y-0 cursor-pointer lg:-translate-x-32 lg:-translate-y-16"
+				>
+					<div
+						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
+					>
+						<MessageCircle />
+						<span>Order here!</span>
+					</div>
+				</a>
+				<a
+					href="https://maps.app.goo.gl/Mv6aDj16UJhpBSTQ9"
+					class="inline-block translate-x-32 -translate-y-28 cursor-pointer md:translate-x-32 md:-translate-y-20"
+				>
+					<div
+						class="flex items-center gap-4 rounded-full border-2 px-4 py-2 text-center lg:px-6 lg:py-3"
+					>
+						<MapPin /><span>We're here!</span>
+					</div>
+				</a>
+			</div>
 			<img
 				class="absolute bottom-0 left-0 z-10 h-full w-full object-cover object-bottom"
 				src={burgerBg.src}
-			/>
-			<div>
-				<a></a>
-			</div>
-			<img
-				class="absolute top-1/2 left-1/2 z-0 h-min w-72 -translate-x-1/2 -translate-y-[450px] lg:w-96 2xl:z-20"
-				src={ninaLogo.src}
 			/>
 		</section>
 	</main>

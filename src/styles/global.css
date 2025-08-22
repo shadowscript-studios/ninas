@@ -26,7 +26,48 @@ html {
 
 @theme {
 	--color-nina-navy: #161b22;
+	--color-nina-blue: #253546;
 	--color-nina-orange: #e4ab49;
 	--color-nina-beige: #dad4c4;
 	--color-nina-beige-2: #cbbba0;
+	--color-nina-accent: #e4ab49;
+}
+
+.side-bar::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 9px;
+	height: 100%;
+	background-color: var(--color-nina-accent);
+}
+
+.glass {
+	/* From https://css.glass */
+	background: rgba(22, 27, 34, 0.16);
+	/* border-radius: 16px; */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	/* border: 1px solid rgba(22, 27, 34, 0.28); */
+}
+
+.nav-item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 4px;
+	opacity: 0;
+	background-color: var(--color-nina-accent);
+	/* @apply text-sm font-medium text-gray-700 hover:text-gray-900; */
+}
+
+.nav-item:hover::before {
+	/* height: 3px; */
+	height: 4px;
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
 }
