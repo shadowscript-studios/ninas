@@ -1,3 +1,32 @@
 ---
-
+import Welcome from "../components/Welcome.astro";
+import Order from "../components/Order.astro";
+import Info from "../components/Info.astro";
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/navigation/Navigation.astro";
+import "../styles/global.css";
 ---
+
+<Layout>
+	<!-- <ul>
+		<li><a href={`/${lang}/home/`}>{t("nav.home")}</a></li>
+		<li><a href={`/${lang}/about/`}>{t("nav.hello")}</a></li>
+		<li><a href="https://twitter.com/astrodotbuild">{t("nav.twitter")}</a></li>
+	</ul> -->
+	<!-- <div class=""> -->
+	<Navigation />
+	<div class="scroll-smooth">
+		<div class="snap-start">
+			<Welcome />
+		</div>
+		<!-- <div class="bg-nina-accent mx-auto h-6 w-full max-w-7xl"></div> -->
+		<div class="snap-center">
+			<Order />
+		</div>
+		<div class="bg-nina-accent mx-auto hidden h-6 w-full max-w-[1712px]"></div>
+		<div class="snap-center">
+			<Info />
+		</div>
+		<!-- <div class="bg-nina-accent mx-auto h-6 w-full max-w-7xl"></div> -->
+	</div>
+</Layout>
